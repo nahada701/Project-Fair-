@@ -1,0 +1,38 @@
+ CONTEXT API
+1.providing a centralised way to manage state accross components
+2.share specific info (like state or fnction) within multiple compoents without props drillling
+3.steps
+        1.Creating a context using createContext() method
+        2.Proving the context :using provider of context ,so that helps to provide data throgh components
+        3.Consuming the context to use/access data shared by context api 'useContext()' hook
+        
+
+
+import React, { createContext, useState } from 'react'
+
+
+export const addResponseContext=createContext()
+
+function ContextApi({childern}) {
+    const [addResponse,setAddResponse]=useState()
+  return (
+    <div>
+        <addResponseContext.Provider value={{addResponse,setAddResponse}} >{childern}
+        </addResponseContext.Provider>
+    </div>
+  )
+}
+
+export default ContextApi 
+
+
+
+in Main.jsx rende app.jsx inside ContextApi
+
+ <StrictMode>
+    <ContextApi>
+      <BrowserRouter>
+      <App />
+      </BrowserRouter>
+    </ContextApi>
+  </StrictMode>,
