@@ -22,7 +22,7 @@ function Header() {
           
           </Navbar.Brand>
           <div className='ms-auto '>
-           <button className=' btn btn-info' onClick={handlelogout}>Logout</button>
+           <button className=' btn btn-info' onClick={handlelogout}>{isAuthorised ? "Logout":'Login'}</button>
 
            </div>
         </Container>

@@ -9,12 +9,10 @@ import ContextApi from './context/ContextApi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
     <ContextApi>
       <BrowserRouter>
       <App />
       </BrowserRouter>
     </ContextApi>
-
   </StrictMode>,
 )
