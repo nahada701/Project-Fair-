@@ -14,7 +14,7 @@ function ProjectCard({displayData}) {
   return (
 
     <div>
-    <Card style={{ width: '18rem'}}  onClick={handleShow}>
+    <Card style={{ width: '20rem'}}  onClick={handleShow}>
     <Card.Img variant="top" style={{height:"17rem"}} src={`${serverURL}/uploads/${displayData?.projectImg}`} />
     <Card.Body>
       <Card.Title className='text-center'>{displayData?.title}</Card.Title>
